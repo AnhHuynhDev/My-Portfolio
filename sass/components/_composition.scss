@@ -1,0 +1,72 @@
+.composition {
+    position: relative;
+    text-align: center;
+
+    &__photo {
+        width: 30%;
+        -webkit-filter: drop-shadow(1px 1px 2px #222);
+        filter: drop-shadow(1px 1px 2px #222);   
+        border-radius: 2px;
+        z-index: 10;
+        transition: all 0.2s;
+ 
+        &--p1 {
+            left: 0;
+            top: 0;
+            width: 20%;
+            margin-right: 5rem;
+
+            @include respond(phone){
+                margin-right: 3rem;
+            }
+        }
+        
+        &--p2 {
+            left: 0;
+            top: 0;
+            width: 25%;
+            margin-right: 3rem;
+
+            @include respond(phone){
+                margin-right: 1.5rem;
+            }
+        }
+
+        &--p3 {
+            left: 0;
+            top: 0;
+            width: 23%;
+            margin-bottom: -1.5rem;
+
+            @include respond(phone){
+                margin-bottom: -1rem;
+            }
+        }
+
+        &--p4 {
+            left: 0;
+            top: 0;
+            width: 22%;
+        }
+
+        &--p5 {
+            left: 0;
+            top: 0;
+            width: 33%;
+            margin-top: 4rem;
+        }
+
+        &--p6 {
+            left: 0;
+            top: 0;
+            width: 30%;
+        }
+
+        &:hover {
+            transform: scale(1.1) translateY(0.2rem);
+            -webkit-filter: drop-shadow(1.5px 1.5px 4px #222);
+            filter: drop-shadow(1.5px 1.5px 4px #222);
+            z-index: 20;
+        }
+    }
+}

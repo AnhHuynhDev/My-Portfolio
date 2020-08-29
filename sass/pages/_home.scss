@@ -1,0 +1,43 @@
+.sectionAbout {
+    background-color: $color-grey-light-1;
+    padding: 18rem 0 28rem 0;
+    margin-top: -20vh;
+
+    @include respond(phone) {
+        padding: 18rem 0;
+    }
+}
+
+.section-feature {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.803), 
+        rgba($color-primary-dark, 0.803)),
+        url("../img/code.jpg");
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > * { //just select the direct child "row", not all child
+        transform: skewY(7deg);
+    }
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
+
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
+}
+
+.myProject {
+    background-color: $color-grey-light-1;
+    padding: 22rem 0 15rem 0;
+    margin-top: -10rem;
+
+    @include respond(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
+}
