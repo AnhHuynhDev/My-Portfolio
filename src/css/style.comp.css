@@ -230,7 +230,7 @@ body {
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 80px;
+    border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
@@ -238,8 +238,10 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+        background-image: linear-gradient(to right bottom, #EA8D8D, #A890FE); }
       .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #56ab2f, #a8e063); }
+      .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #efd376, #f4cc80); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
@@ -253,9 +255,12 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/covid.jpg);
+      background-image: linear-gradient(to right bottom, #EA8D8D, #A890FE), url(../img/book.webp);
       background-blend-mode: hard-light; }
     .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #56ab2f, #a8e063), url(../img/covid.jpg);
+      background-blend-mode: hard-light; }
+    .card__picture--3 {
       background-image: url(../img/portfolio.jpg); }
   .card__heading {
     font-size: 3.5rem;
@@ -270,8 +275,10 @@ body {
   .card__heading-span {
     padding: 1rem 1rem; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(234, 141, 141, 0.85), rgba(168, 144, 254, 0.85)); }
     .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(86, 171, 47, 0.85), rgba(168, 224, 99, 0.85)); }
+    .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(239, 211, 118, 0.85), rgba(244, 204, 128, 0.85)); }
   .card__details {
     padding: 2rem; }
@@ -404,7 +411,7 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
-.popup, .popup2 {
+.popup, .popup2, .popup3 {
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -418,11 +425,11 @@ body {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px); }
   @supports (-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px)) {
-    .popup, .popup2 {
+    .popup, .popup2, .popup3 {
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       background-color: rgba(0, 0, 0, 0.8); } }
-  .popup__content, .popup2__content {
+  .popup__content, .popup2__content, .popup3__content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -436,32 +443,25 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
-  .popup__left, .popup2__left {
+  .popup__left, .popup2__left, .popup3__left {
     width: 65%;
     display: table-cell;
     overflow: hidden; }
-  .popup__right, .popup2__right {
+  .popup__right, .popup2__right, .popup3__right {
     width: 35%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
-  .popup__video1, .popup2__video1 {
-    display: block;
-    width: 100%; }
-  .popup__video2, .popup2__video2 {
-    display: block;
-    height: 30%;
-    width: 100%; }
-  .popup__text, .popup2__text {
+  .popup__text, .popup2__text, .popup3__text {
     font-size: 1.6rem;
     margin-bottom: 4rem; }
-  .popup:target, .popup2:target {
+  .popup:target, .popup2:target, .popup3:target {
     opacity: 1;
     visibility: visible; }
-  .popup:target .popup__content, .popup2:target .popup__content, .popup:target .popup2__content, .popup2:target .popup2__content {
+  .popup:target .popup__content, .popup2:target .popup__content, .popup3:target .popup__content, .popup:target .popup2__content, .popup2:target .popup2__content, .popup3:target .popup2__content, .popup:target .popup3__content, .popup2:target .popup3__content, .popup3:target .popup3__content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
-  .popup__close:link, .popup__close:visited, .popup2__close:link, .popup2__close:visited {
+  .popup__close:link, .popup__close:visited, .popup2__close:link, .popup2__close:visited, .popup3__close:link, .popup3__close:visited {
     color: #777;
     position: absolute;
     top: 2.5rem;
@@ -471,7 +471,7 @@ body {
     display: inline-block;
     transition: all .2s;
     line-height: 1; }
-  .popup__close:hover, .popup2__close:hover {
+  .popup__close:hover, .popup2__close:hover, .popup3__close:hover {
     color: #ce4040; }
 
 .footer {
@@ -534,6 +534,8 @@ body {
         width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 10rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 10rem) / 3); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 10rem) / 4); }
 
